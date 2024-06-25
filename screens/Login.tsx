@@ -43,7 +43,7 @@ const Login = () => {
         </View>
         <View className="flex-row px-[100px] mb-10">
         <Text>You Don't have an account?</Text>
-        <TouchableOpacity onPress={() => navigation.navigate('SignUpScreen')}>
+        <TouchableOpacity onPress={() => navigation.navigate('SignUpScreenStack')}>
             <Text className="text-[#00008B] font-semibold">Signup</Text>
         </TouchableOpacity>
         </View>

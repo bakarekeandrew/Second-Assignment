@@ -48,7 +48,7 @@ useLayoutEffect(() => {
           </View>
           <View className="flex-row px-[100px] mb-10">
             <Text>You already have an account?</Text>
-            <TouchableOpacity onPress={() => navigation.navigate('LoginScreen')}>
+            <TouchableOpacity onPress={() => navigation.navigate('LoginScreenStack')}>
               <Text className="text-[#00008B] font-semibold">Login</Text>
             </TouchableOpacity>
           </View>
