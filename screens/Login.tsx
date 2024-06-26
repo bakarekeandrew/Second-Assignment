@@ -1,4 +1,4 @@
-import { Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { Image, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import React, { useLayoutEffect } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation, DrawerActions} from '@react-navigation/native'
@@ -21,17 +21,24 @@ const Login = () => {
 
     return (
         <SafeAreaView className="flex-1 px-3">
-        <TouchableOpacity className="p-3" onPress={() => navigation.dispatch(DrawerActions.openDrawer())}>
-            <Entypo name="menu" size={24} color="black" />
-            <View>
 
+        <View className="flex-row">
+            <TouchableOpacity className="p-3" onPress={() => navigation.dispatch(DrawerActions.openDrawer())}>
+                <Entypo name="menu" size={24} color="black" />
+            </TouchableOpacity>
+            <View className="items-center justify-center pl-[20px] pt-10 ">
+              <Image
+                 source={require('../assets/try.jpg')}
+                 className="w-60 h-52 rounded-sm"
+              />
             </View>
-        </TouchableOpacity>
+        </View>    
+        
 
-        <View className="items-center justify-center pt-32 ">
+        <View className="items-center justify-center pt-3 ">
         <Text className="font-semibold text-[30px] text-[#00008B]">Login Form</Text>
         </View>
-        <View className="items-center justify-center pt-20">
+        <View className="items-center justify-center pt-12">
         <TextInput
             placeholder="Email..."
             className="w-80 h-12 border rounded-full p-3 mb-3"

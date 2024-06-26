@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import React, { useLayoutEffect } from 'react'
 import { useNavigation, DrawerActions } from '@react-navigation/native'
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -17,17 +17,23 @@ useLayoutEffect(() => {
 
   return (
     <SafeAreaView className="flex-1 px-3">
-          <TouchableOpacity className="p-3" onPress={() => navigation.dispatch(DrawerActions.openDrawer())}>
-              <Entypo name="menu" size={24} color="black" />
-              <View>
-
-              </View>
-          </TouchableOpacity>
+        
+          <View className="flex-row">
+            <TouchableOpacity className="p-3" onPress={() => navigation.dispatch(DrawerActions.openDrawer())}>
+                <Entypo name="menu" size={24} color="black" />
+            </TouchableOpacity>
+            <View className="items-center justify-center pl-[20px] pt-10 ">
+              <Image
+                 source={require('../assets/try2.jpg')}
+                 className="w-60 h-52 rounded-sm"
+              />
+            </View>
+          </View>
       
-          <View className="items-center justify-center pt-32 ">
+          <View className="items-center justify-center pt-3 ">
             <Text className="font-semibold text-[30px] text-[#00008B]">Signup Form</Text>
           </View>
-          <View className="items-center justify-center pt-20">
+          <View className="items-center justify-center pt-7">
             <TextInput
               placeholder="Names..."
               className="w-80 h-12 border rounded-full p-3 mb-3"
@@ -56,8 +62,7 @@ useLayoutEffect(() => {
             <TouchableOpacity className="items-center justify-center w-80 h-12 bg-[#00008B] border rounded-full ">
               <Text className="text-white text-[20px] font-semibold">Signup</Text>
             </TouchableOpacity>
-            <View></View>
-            <Text>Or</Text>
+          
           </View>
           
 
